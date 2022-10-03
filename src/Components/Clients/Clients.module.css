@@ -1,0 +1,19 @@
+.containerMaster {
+  display: inline-block;
+  right: 0px;
+  margin-top: 5rem;
+  margin-left: 30rem;
+  width: 80vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.containerTitle {
+  max-width: 100vw;
+}
+.main {
+  background-color: aqua;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

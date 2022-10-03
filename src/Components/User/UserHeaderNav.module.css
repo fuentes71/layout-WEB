@@ -1,0 +1,20 @@
+.navMobile {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  padding: 0 1rem;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0 0 0 0.2);
+  border-radius: 0.2rem;
+  transform: translateX(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+.navMobileActive {
+  transition: 0.3s;
+  transform: initial;
+  opacity: 1;
+  z-index: 999;
+  pointer-events: initial;
+}

@@ -1,18 +1,24 @@
 import React from 'react';
-import { ChakraProvider, Box, Grid, theme } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-
-import Nav from './Components/User/UserHeaderNav';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './Components/Header';
+import Administrators from './Components/Administrators/Administrators';
+import Clients from './Components/Clients/Clients';
+import Collaborators from './Components/Collaborators/Collaborators';
+import User from './Components/User/User';
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Nav />
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/Administrators" element={<Administrators />} />
+          <Route path="/Clients" element={<Clients />} />
+          <Route path="/Collaborators" element={<Collaborators />} />
+          <Route path="/User" element={<User />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
