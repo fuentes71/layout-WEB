@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/Administrators" element={<Administrators />} />
           <Route path="/Clients" element={<Clients />} />
+
           <Route path="/Collaborators" element={<Collaborators />} />
           <Route path="/User" element={<User />} />
         </Routes>

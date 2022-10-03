@@ -26,3 +26,9 @@ h1 {
 .logo {
   text-decoration: none;
 }
+
+@media (max-width: 430px) {
+  nav {
+    display: inline-block;
+  }
+}

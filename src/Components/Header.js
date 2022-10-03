@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Header.module.css';
 import UserNav from './User/UserNav';
 import UserNavMobile from './User/UserNavMobile';
 import { Link } from 'react-router-dom';
 import imgUser from '../img/user.svg';
+import { useLocation } from 'react-router-dom';
+import UseMedia from './Hooks/UseMedia';
 const Header = () => {
-  const [mobile, setMobile] = useState(false);
+  const mobile = UseMedia('(max-width: 425px)');
+  const [mobileMenu, setMobileMenu] = React.useState(false);
+
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    setMobileMenu(false);
+  }, [pathname]);
   return (
     <>
       <header style={styles.header}>
