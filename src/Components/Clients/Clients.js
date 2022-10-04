@@ -24,7 +24,7 @@ const Clients = () => {
   ]);
   const mobile = UseMedia('(max-width: 780px)');
   const [mobileMenu, setMobileMenu] = React.useState(false);
-
+  console.log(mobileMenu);
   const { pathname } = useLocation();
   React.useEffect(() => {
     setMobileMenu(false);

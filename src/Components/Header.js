@@ -9,6 +9,7 @@ import UseMedia from './Hooks/UseMedia';
 const Header = () => {
   const mobile = UseMedia('(max-width: 430px)');
   const [mobileMenu, setMobileMenu] = React.useState(false);
+  console.log(mobileMenu);
 
   const { pathname } = useLocation();
   React.useEffect(() => {
