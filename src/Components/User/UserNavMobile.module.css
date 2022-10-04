@@ -1,10 +1,85 @@
 .burger {
   position: absolute;
-  top: 20px;
+  top: 0.8rem;
   left: 20px;
 }
 
 .button {
   border: none;
   background: transparent;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 10rem;
+  padding: 20px 0;
+  padding-left: 0;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 2px 0px 18px #555;
+  overflow: hidden;
+}
+li {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 100vw;
+}
+
+.link {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  color: #858585;
+  font-size: 0.8rem;
+  width: 100vh;
+  padding: 15px 15px;
+}
+.link img {
+  width: 20px;
+  height: 20px;
+}
+
+.link:hover,
+.link:focus {
+  color: #5d5fef;
+}
+
+.link:focus {
+  background-color: rgba(93, 95, 239, 0.1);
+}
+.link:hover::before,
+.link:global(.active)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 58px;
+  background: #5d5fef;
+  margin-top: -15px;
+  left: 9.78rem;
+}
+.link:global(.active) {
+  background-color: rgba(93, 95, 239, 0.1);
+  color: #5d5fef;
+}
+.link a:global(.active) svg > * {
+  fill: #5d5fef;
+}
+.exit {
+  display: inline-block;
+  bottom: 8%;
+  left: 0;
+  position: absolute;
+  width: 50vh;
+  padding: 15px 0px;
+  background-color: #5d5fef;
+}
+.exit img {
+  position: relative;
+  left: 15%;
 }

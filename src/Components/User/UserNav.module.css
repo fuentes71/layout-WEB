@@ -3,7 +3,7 @@ ul {
   flex-direction: column;
   position: fixed;
   width: 25vw;
-  padding: 20px 10px;
+  padding: 20px 20px;
   padding-left: 0;
   height: 100vh;
   box-shadow: 2px 0px 18px #555;
@@ -40,15 +40,23 @@ img {
 .link:focus {
   background-color: rgba(93, 95, 239, 0.1);
 }
-.link:hover::after {
+.link:hover::before,
+.link:global(.active)::before {
   content: '';
   display: block;
-  position: fixed;
-  width: 5px;
-  height: 64px;
+  position: absolute;
+  width: 4px;
+  height: 58px;
   background: #5d5fef;
-  margin-block-start: calc(-2.6%);
-  margin-inline-start: calc(101vw - 76.8vw);
+  margin-top: -15px;
+  left: 9.78rem;
+}
+.link:global(.active) {
+  background-color: rgba(93, 95, 239, 0.1);
+  color: #5d5fef;
+}
+.link a:global(.active) svg > * {
+  fill: #5d5fef;
 }
 
 .exit {

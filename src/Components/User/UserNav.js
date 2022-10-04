@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ArrowLeft from '../../img/arrow.svg';
 import styles from './UserNav.module.css';
 import admin from '../../img/admin.svg';
@@ -9,20 +9,20 @@ const UserNav = () => {
   return (
     <ul style={styles.ul}>
       <li style={styles.li}>
-        <Link className={styles.link} to="/administrators">
+        <NavLink className={styles.link} to="/administrators">
           <img src={admin} alt="" />
           Administrators
-        </Link>
-        <Link className={styles.link} to="/clients">
+        </NavLink>
+        <NavLink className={styles.link} to="/clients">
           <img src={client} alt="" /> Clients
-        </Link>
-        <Link className={styles.link} to="/collaborators">
+        </NavLink>
+        <NavLink className={styles.link} to="/collaborators">
           <img src={colab} alt="" />
           Collaborators
-        </Link>
-        <Link className={styles.exit} to="/">
+        </NavLink>
+        <NavLink className={styles.exit} to="/">
           <img src={ArrowLeft} alt="" />
-        </Link>
+        </NavLink>
       </li>
     </ul>
   );

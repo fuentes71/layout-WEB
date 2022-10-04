@@ -28,7 +28,10 @@ h1 {
 }
 
 @media (max-width: 430px) {
-  nav {
+  .logo {
     display: inline-block;
+    position: absolute;
+    top: 0rem;
+    left: 30vw;
   }
 }

@@ -30,17 +30,7 @@ const Header = () => {
             </Link>
           </div>
         </nav>
-        <div>
-          {mobile ? (
-            <div>
-              <UserNavMobile />
-            </div>
-          ) : (
-            <div>
-              <UserNav />
-            </div>
-          )}
-        </div>
+        <div>{mobile ? <UserNavMobile /> : <UserNav />}</div>
       </header>
     </>
   );
