@@ -36,20 +36,22 @@ const Clients = () => {
   return (
     <>
       <section className={styles.containerMaster}>
-        <div className={styles.containerTitle}>
-          <h1>Lista de clientes</h1>
-          <p>{number} clientes cadastrados</p>
-        </div>
-        <div className={styles.register}>
-          {mobile ? (
-            <span onClick={() => setNumber(number + 1)}>
-              <img src={userMobile} alt="" />
-            </span>
-          ) : (
-            <span onClick={() => setNumber(number + 1)}>
-              + Cadatrar Cliente
-            </span>
-          )}
+        <div className={styles.containerChildren}>
+          <div className={styles.containerTitle}>
+            <h1>Lista de clientes</h1>
+            <p>{number} clientes cadastrados</p>
+          </div>
+          <div className={styles.register}>
+            {mobile ? (
+              <span onClick={() => setNumber(number + 1)}>
+                <img src={userMobile} alt="" />
+              </span>
+            ) : (
+              <span onClick={() => setNumber(number + 1)}>
+                + Cadatrar Cliente
+              </span>
+            )}
+          </div>
         </div>
         <div className={styles.containerClient}>
           {clients.map((client, index) => (

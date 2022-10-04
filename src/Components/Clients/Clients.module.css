@@ -1,17 +1,22 @@
 .containerMaster {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  width: 72vw;
+  justify-content: space-evenly;
+  top: 20%;
   right: 0;
+  width: 70vw;
   height: 100vh;
   align-content: center;
 }
-.containerTitle {
-  position: absolute;
-  width: 166px;
-  height: 30px;
-  top: 104px;
+.containerChildren {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
 }
+
 .containerTitle h1 {
   color: #2d2d2d;
   font-style: normal;
@@ -23,17 +28,15 @@
   font-family: sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 24px;
   color: #2d2d2d;
 }
 
 .register {
-  position: absolute;
   width: 200px;
   height: 50px;
-  right: calc(2vw);
-  top: 104px;
+  right: 2vw;
   background: #5d5fef;
   border-radius: 10px;
   cursor: pointer;
@@ -51,7 +54,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 40px;
   margin-top: 100px;
-  margin-left: -20px;
   gap: 20px;
 }
 
@@ -81,7 +83,11 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
-
+@media (min-width: 1200px) {
+  .containerMaster {
+    top: 15rem;
+  }
+}
 @media (max-width: 780px) {
   .register {
     width: 50px;
@@ -104,19 +110,43 @@
     padding-right: 5px;
   }
 }
+@media (max-width: 999px) {
+  .containerMaster {
+    top: 40rem;
+  }
+}
+@media (max-width: 780px) {
+  .containerMaster {
+    top: 5rem;
+  }
+  .containerChildren {
+    padding: 0;
+    padding-right: 20px;
+  }
+  .containerClient {
+    margin: 0 10px;
+    top: 0;
+    right: 2%;
+  }
+}
 @media (max-width: 430px) {
   .containerMaster {
-    width: 90vw;
-    margin: 0 20px;
+    width: 100vw;
+    display: block;
+  }
+  .containerChildren {
+    padding: 0 5px;
   }
 
   .containerClient {
-    position: absolute;
+    top: 1.5rem;
     grid-template-columns: 1fr;
+    max-width: 100vw;
+    padding: 0 15px;
   }
   .containerClient .Clients {
     margin: auto;
-    padding: 15px 100% 15px 15px;
+    padding: 15px 69% 15px 15px;
   }
 }
 @media (max-width: 375px) {
@@ -129,9 +159,10 @@
     right: 15px;
   }
   .containerTitle {
-    left: 15px;
+    left: 10px;
   }
   .containerClient {
     left: -30px;
+    padding: 0 27px;
   }
 }

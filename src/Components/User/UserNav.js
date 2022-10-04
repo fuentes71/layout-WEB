@@ -7,17 +7,17 @@ import client from '../../img/client.svg';
 import colab from '../../img/colab.svg';
 const UserNav = () => {
   return (
-    <ul style={styles.ul}>
-      <li style={styles.li}>
+    <ul className={styles.ul}>
+      <li className={styles.li}>
         <NavLink className={styles.link} to="/administrators">
-          <img src={admin} alt="" />
+          <img className={styles.img} src={admin} alt="" />
           Administrators
         </NavLink>
         <NavLink className={styles.link} to="/clients">
-          <img src={client} alt="" /> Clients
+          <img className={styles.img} src={client} alt="" /> Clients
         </NavLink>
         <NavLink className={styles.link} to="/collaborators">
-          <img src={colab} alt="" />
+          <img className={styles.img} src={colab} alt="" />
           Collaborators
         </NavLink>
         <NavLink className={styles.exit} to="/">

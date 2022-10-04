@@ -9,7 +9,7 @@
   background: transparent;
 }
 
-ul {
+.ul {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -21,7 +21,7 @@ ul {
   box-shadow: 2px 0px 18px #555;
   overflow: hidden;
 }
-li {
+.li {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;

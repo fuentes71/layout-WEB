@@ -1,4 +1,4 @@
-ul {
+.ul {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -9,7 +9,7 @@ ul {
   box-shadow: 2px 0px 18px #555;
   overflow: hidden;
 }
-li {
+.li {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
@@ -25,10 +25,10 @@ li {
   line-height: 27px;
   color: #858585;
   font-size: 18px;
-  width: 100vh;
+  width: 24%;
   padding: 15px 20px;
 }
-img {
+.img {
   margin-right: 10px;
 }
 
@@ -40,16 +40,16 @@ img {
 .link:focus {
   background-color: rgba(93, 95, 239, 0.1);
 }
-.link:hover::before,
-.link:global(.active)::before {
+.link:hover::after,
+.link:global(.active)::after {
   content: '';
   display: block;
   position: absolute;
   width: 4px;
-  height: 58px;
+  height: 64px;
   background: #5d5fef;
   margin-top: -15px;
-  left: 9.78rem;
+  left: 26.1vw;
 }
 .link:global(.active) {
   background-color: rgba(93, 95, 239, 0.1);
@@ -60,15 +60,35 @@ img {
 }
 
 .exit {
-  display: inline-block;
-  bottom: 9%;
-  left: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  bottom: 95px;
+  align-items: center;
   position: absolute;
-  width: 50vh;
+  width: 100%;
   padding: 15px 0px;
   background-color: #5d5fef;
 }
-.exit img {
-  position: relative;
-  left: calc(100vw - 88vw);
+
+@media (max-width: 768px) {
+  .ul {
+    width: 10rem;
+  }
+  .link {
+    font-size: 1rem;
+    width: 30%;
+  }
+  .link {
+    font-size: 14px;
+  }
+  .link:hover::before,
+  .link:global(.active)::before {
+    left: 11rem;
+    height: 59px;
+  }
+  .img {
+    width: 20px;
+    height: 20px;
+  }
 }

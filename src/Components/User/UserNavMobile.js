@@ -21,8 +21,8 @@ const UserNavMobile = () => {
         </button>
       </div>
       {nav ? (
-        <ul style={styles.ul}>
-          <li style={styles.li}>
+        <ul className={styles.ul}>
+          <li className={styles.li}>
             <NavLink className={styles.link} to="/administrators">
               <img className={styles.img} src={admin} alt="" />
               Administrators

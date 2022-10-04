@@ -6,12 +6,14 @@ import Administrators from './Components/Administrators/Administrators';
 import Clients from './Components/Clients/Clients';
 import Collaborators from './Components/Collaborators/Collaborators';
 import User from './Components/User/User';
+import Home from './Components/Home';
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/Administrators" element={<Administrators />} />
           <Route path="/Clients" element={<Clients />} />
 

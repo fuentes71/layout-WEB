@@ -7,7 +7,7 @@ import imgUser from '../img/user.svg';
 import { useLocation } from 'react-router-dom';
 import UseMedia from './Hooks/UseMedia';
 const Header = () => {
-  const mobile = UseMedia('(max-width: 425px)');
+  const mobile = UseMedia('(max-width: 430px)');
   const [mobileMenu, setMobileMenu] = React.useState(false);
 
   const { pathname } = useLocation();
