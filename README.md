@@ -70,6 +70,14 @@ The main features of the application are:
 
   1.0.0.0
 
+  ## Updates
+    - Develop login screen
+    - Develop add customers screen
+      - Develop client editing screen for admin
+    - Develop user screen
+    - Develop token for admin or client
+      - Develop permissions for each token
+
 
   ## Authors
 
