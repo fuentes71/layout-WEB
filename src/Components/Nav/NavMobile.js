@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './UserNavMobile.module.css';
+import styles from './NavMobile.module.css';
 import burger from '../../img/burger.svg';
 import { NavLink } from 'react-router-dom';
 import ArrowLeft from '../../img/arrow.svg';
 import admin from '../../img/admin.svg';
 import client from '../../img/client.svg';
 import colab from '../../img/colab.svg';
-const UserNavMobile = () => {
+const NavMobile = () => {
   const [nav, setNav] = React.useState(false);
   return (
     <>
@@ -46,4 +46,4 @@ const UserNavMobile = () => {
   );
 };
 
-export default UserNavMobile;
+export default NavMobile;

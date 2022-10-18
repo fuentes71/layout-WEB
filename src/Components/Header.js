@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css';
-import UserNav from './User/UserNav';
-import UserNavMobile from './User/UserNavMobile';
+import Nav from './Nav/Nav';
+import NavMobile from './Nav/NavMobile';
 import { Link } from 'react-router-dom';
 import imgUser from '../img/user.svg';
 import { useLocation } from 'react-router-dom';
@@ -31,7 +31,7 @@ const Header = () => {
             </Link>
           </div>
         </nav>
-        <div>{mobile ? <UserNavMobile /> : <UserNav />}</div>
+        <div>{mobile ? <NavMobile /> : <Nav />}</div>
       </header>
     </>
   );

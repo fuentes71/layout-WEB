@@ -1,13 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ArrowLeft from '../../img/arrow.svg';
-import styles from './UserNav.module.css';
+import styles from './Nav.module.css';
 import admin from '../../img/admin.svg';
 import client from '../../img/client.svg';
 import colab from '../../img/colab.svg';
-const UserNav = () => {
+import UseAuth from '../Hooks/UseAuth';
+import Signin from '../User/Signin/Signin';
+
+const Nav = () => {
+  const { signed } = UseAuth();
   return (
-    <ul className={styles.ul}>
+    <ul className={`${signed > 0 ? styles.ul : styles.ulDisable}`}>
       <li className={styles.li}>
         <NavLink className={styles.link} to="/administrators">
           <img className={styles.img} src={admin} alt="" />
@@ -28,4 +32,4 @@ const UserNav = () => {
   );
 };
 
-export default UserNav;
+export default Nav;
